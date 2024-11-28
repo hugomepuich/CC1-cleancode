@@ -39,9 +39,8 @@ function Yams(rolls) {
 
 function CalculatePoints(rolls) {
 
-    //const matching = MatchingDices(rolls);
 
-    if (Yams(rolls)) {
+    if (hasNMatching(rolls, 5)) {
         return 50;
     }
 
