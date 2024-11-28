@@ -41,6 +41,10 @@ function CalculatePoints(rolls) {
 
     //const matching = MatchingDices(rolls);
 
+    if (Yams(rolls)) {
+        return 50;
+    }
+
     if (GrandSuite(rolls) && rolls.length == 5) {
         return 40;
     }
