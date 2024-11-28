@@ -26,7 +26,12 @@ function MatchingDices(rolls) {
 
 function CalculatePoints(rolls) {
 
-    const matching = MatchingDices(rolls);
+    //const matching = MatchingDices(rolls);
+
+    // Full
+    if (hasNMatching(rolls, 3) && hasNMatching(rolls, 2)) {
+        return 30;
+    }
 
     // Brelan
     if (hasNMatching(rolls, 3)) {
@@ -37,6 +42,7 @@ function CalculatePoints(rolls) {
     if (hasNMatching(rolls, 4)) {
         return 35;
     }
+
 
     const sum = rolls.reduce((a, b) => a + b, 0);
     return sum;
