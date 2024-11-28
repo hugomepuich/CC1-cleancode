@@ -15,3 +15,13 @@ test('Voir si le matching fonctionne', () => {
     expect(calculator.matching([1, 2, 1, 3, 5])['6'])
     .toBe(undefined);
 })
+
+test('Voir si le NMatching fonctionne', () => {
+    expect(calculator.NMatching([1, 1, 1, 1, 1], 5)).toBe(true);
+    expect(calculator.NMatching([1, 1, 1, 1, 1], 4)).toBe(false);
+
+    expect(calculator.NMatching([1, 2, 1], 2)).toBe(true);
+    expect(calculator.NMatching([1, 2, 1, 3, 5], 2)).toBe(true);
+    expect(calculator.NMatching([1, 2, 1, 3, 5], 3)).toBe(false);
+    expect(calculator.NMatching([1, 2, 1, 2, 1], 3)).toBe(true);
+})

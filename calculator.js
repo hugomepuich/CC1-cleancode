@@ -1,3 +1,15 @@
+function hasNMatching(rolls, x) {
+    rolls_count = MatchingDices(rolls);
+
+    for (const key in rolls_count) {
+        if (rolls_count[key] == x) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 function MatchingDices(rolls) {
     rolls_count = {};
     
@@ -19,3 +31,4 @@ function CalculatePoints(rolls) {
 
 exports.calc = CalculatePoints;
 exports.matching = MatchingDices;
+exports.NMatching = hasNMatching;
