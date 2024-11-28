@@ -1,5 +1,6 @@
 const calculator = require('./calculator');
 
+// Sum (cas par défaut)
 test('Voir si la somme fonctionne bien', () => {
     expect(calculator.calc([1])).toBe(1);
     expect(calculator.calc([1,2])).toBe(3);
@@ -7,6 +8,7 @@ test('Voir si la somme fonctionne bien', () => {
     expect(calculator.calc([1,2,3,4,5,6])).toBe(21);
 })
 
+// Matching
 test('Voir si le matching fonctionne', () => {
     expect(calculator.matching([1, 2, 1, 3, 5])['1'])
     .toBe(2);
@@ -16,6 +18,8 @@ test('Voir si le matching fonctionne', () => {
     .toBe(undefined);
 })
 
+
+// N Matching
 test('Voir si le NMatching fonctionne', () => {
     expect(calculator.NMatching([1, 1, 1, 1, 1], 5)).toBe(true);
     expect(calculator.NMatching([1, 1, 1, 1, 1], 4)).toBe(false);
@@ -26,8 +30,16 @@ test('Voir si le NMatching fonctionne', () => {
     expect(calculator.NMatching([1, 2, 1, 2, 1], 3)).toBe(true);
 })
 
+// Brelan
 test('Voir si le Brelan fonctionne', () => {
     expect(calculator.calc([1, 1, 1, 2, 2])).toBe(28);
     expect(calculator.calc([1, 2, 1, 2, 1])).toBe(28);
+    expect(calculator.calc([1, 1, 5, 6, 3])).toBe(16);
+})
+
+// Carré
+test('Voir si le Carré fonctionne', () => {
+    expect(calculator.calc([1, 1, 1, 1, 6])).toBe(35);
+    expect(calculator.calc([1, 4, 4, 4, 4])).toBe(35);
     expect(calculator.calc([1, 1, 5, 6, 3])).toBe(16);
 })
