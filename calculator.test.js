@@ -47,3 +47,11 @@ test('Voir si le full fonctionne', () => {
     expect(calculator.calc([1,1,1,2,2])).toBe(30);
     expect(calculator.calc([3,3,5,5,5])).toBe(30);
 });
+
+// Grande Suite
+test ('Voir si le Grande Suite fonctionne', () => {
+    expect(calculator.gs([1,2,3])).toBe(true);
+    expect(calculator.gs([1,2,3,4,5])).toBe(true);
+    expect(calculator.gs([2,3,4,5,6])).toBe(true);
+    expect(calculator.gs([5,4,3,2,1])).toBe(false);
+})

@@ -24,6 +24,15 @@ function MatchingDices(rolls) {
     return rolls_count;
 }
 
+function GrandSuite(rolls) {
+
+    for (let i = 1; i < rolls.length; i++) {
+        if (rolls[i] != rolls[i - 1] + 1) return false;
+    }
+
+    return true;
+}
+
 function CalculatePoints(rolls) {
 
     //const matching = MatchingDices(rolls);
@@ -51,3 +60,4 @@ function CalculatePoints(rolls) {
 exports.calc = CalculatePoints;
 exports.matching = MatchingDices;
 exports.NMatching = hasNMatching;
+exports.gs = GrandSuite
