@@ -33,6 +33,10 @@ function GrandSuite(rolls) {
     return true;
 }
 
+function Yams(rolls) {
+    return rolls.filter((val) => val == rolls[0]).length == 5;
+}
+
 function CalculatePoints(rolls) {
 
     //const matching = MatchingDices(rolls);
@@ -64,4 +68,5 @@ function CalculatePoints(rolls) {
 exports.calc = CalculatePoints;
 exports.matching = MatchingDices;
 exports.NMatching = hasNMatching;
-exports.gs = GrandSuite
+exports.gs = GrandSuite;
+exports.yams = Yams;

@@ -60,3 +60,9 @@ test ('Voir si le Grande Suite fonctionne dans la fonction de calcul', () => {
     expect(calculator.calc([1,2,3,4,5])).toBe(40);
     expect(calculator.calc([2,3,4,5,6])).toBe(40);
 })
+
+// Yams
+test('Voir si Yams fonctionne', () => {
+    expect(calculator.yams([1,1,1,1,1])).toBe(true);
+    expect(calculator.yams([1,2,1,1,1])).toBe(false);
+})
