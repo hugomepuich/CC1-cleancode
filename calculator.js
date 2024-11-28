@@ -37,6 +37,10 @@ function CalculatePoints(rolls) {
 
     //const matching = MatchingDices(rolls);
 
+    if (GrandSuite(rolls) && rolls.length == 5) {
+        return 40;
+    }
+
     // Full
     if (hasNMatching(rolls, 3) && hasNMatching(rolls, 2)) {
         return 30;

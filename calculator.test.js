@@ -55,3 +55,8 @@ test ('Voir si le Grande Suite fonctionne', () => {
     expect(calculator.gs([2,3,4,5,6])).toBe(true);
     expect(calculator.gs([5,4,3,2,1])).toBe(false);
 })
+
+test ('Voir si le Grande Suite fonctionne dans la fonction de calcul', () => {
+    expect(calculator.calc([1,2,3,4,5])).toBe(40);
+    expect(calculator.calc([2,3,4,5,6])).toBe(40);
+})
