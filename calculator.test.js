@@ -25,3 +25,9 @@ test('Voir si le NMatching fonctionne', () => {
     expect(calculator.NMatching([1, 2, 1, 3, 5], 3)).toBe(false);
     expect(calculator.NMatching([1, 2, 1, 2, 1], 3)).toBe(true);
 })
+
+test('Voir si le Brelan fonctionne', () => {
+    expect(calculator.calc([1, 1, 1, 2, 2])).toBe(28);
+    expect(calculator.calc([1, 2, 1, 2, 1])).toBe(28);
+    expect(calculator.calc([1, 1, 5, 6, 3])).toBe(16);
+})
