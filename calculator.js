@@ -37,7 +37,7 @@ function Yams(rolls) {
     return rolls.filter((val) => val == rolls[0]).length == 5;
 }
 
-function CalculatePoints(rolls) {
+function calculatePoints(rolls) {
 
 
     if (hasNMatching(rolls, 5)) {
@@ -66,6 +66,12 @@ function CalculatePoints(rolls) {
 
     const sum = rolls.reduce((a, b) => a + b, 0);
     return sum;
+}
+
+function CalculatePoints(rolls) {
+    const sum = rolls.reduce((a, b) => a + b, 0);
+    const pts = calculatePoints(rolls);
+    return sum > pts ? sum : pts;
 }
 
 exports.calc = CalculatePoints;
